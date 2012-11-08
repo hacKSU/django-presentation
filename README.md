@@ -174,16 +174,18 @@ Lets create a member:
     # That is not cool!
 
 Lets fix our models, so that they give us human readable info. In hacksu/models.py
+```python
+class Member(models.Model):
+    # ...
+    def __unicode__(self):
+        return self.name
 
-    class Member(models.Model):
-        # ...
-        def __unicode__(self):
-            return self.name
+class Project(models.Model):
+    # ...
+    def __unicode__(self):
+        return self.name
+```
 
-    class Project(models.Model):
-        # ...
-        def __unicode__(self):
-            return self.name
 
 Lets hop back into the django shell, and type:
 
@@ -192,13 +194,6 @@ Lets hop back into the django shell, and type:
     >>> Member.objects.all()
 
     [<Member: Dawe>]
-
-So you noticed that Poll.objects.all() gives you: <<Poll: Poll object\> that is not helpful. >To fix this issue, we can add something to our models.py class. 
-
-```python
-def __unicode__(self):
-    return self.title
-```
 
 ###Admin Features
 
