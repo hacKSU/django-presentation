@@ -218,14 +218,14 @@ Visit: http://127.0.0.1:8000/admin/ and enter the admin username and password.
 
 That is awesome, right. But you will see, Auth and Sites. Would you like to see your data models there too?
 
-Ok, so lets open /polls/admin.py and add the following:
+Ok, so lets open /hacksu/admin.py and add the following:
 
 ```python
-from polls.models import Poll, Choice
+from hacksu.models import Member, Project
 from django.contrib import admin
 
-admin.site.register(Poll)
-admin.site.register(Choice)
+admin.site.register(Member)
+admin.site.register(Project)
 ```
 
 This tells Django to add your models to the admin interface. 
