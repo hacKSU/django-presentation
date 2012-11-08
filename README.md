@@ -162,18 +162,13 @@ Lets play with the python shell:
 Lets create a member:
 
     >>> from hacksu.models import Member
-
-    >>> Members.objects.all()
+    >>> Member.objects.all()
     []
 
     >>> from django.utils import timezone
-    
     >>> m = Member(name="Dawe", email="some@one.com", join_date=timezone.now())
-
     >> m.save()
-
-    >> Members.objects.all()
-
+    >> Member.objects.all()
     [<Member: Member object>]
     
     # That is not cool!
