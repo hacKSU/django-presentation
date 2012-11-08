@@ -273,15 +273,15 @@ Then inside that html file we can access our model objects and can embed python 
         <title>hacKSU Members</title>
     </head>
     <body>
-        {{ for member in members }}
+        {% for member in members %}
             <p>{{ member.name }}</p>
             <p>{{ member.email }}</p>
             <p>{{ member.join_date }}</p>
-        {{ endfor }}
+        {% endfor %}
 
-        {{ if not members }}
+        {% if not members %}
             No members!
-        {{ endif }}
+        {% endif %}
     </body>
 </html>
 ```
